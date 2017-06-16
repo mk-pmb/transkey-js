@@ -25,7 +25,10 @@ module.exports = (function () {
 
   EX.ensureDictFunc = function (dict) {
     if (ifFun(dict)) { return dict; }
-    if ((typeof dict === 'string') && ifFun(EX[dict])) { return EX[dict]; }
+    if (typeof dict === 'string') {
+      if (ifFun(EX[dict])) { return EX[dict]; }
+      throw new Error('Unknown translator function name: ' + dict);
+    }
     return function (k) { return dict[k]; };
   };
 

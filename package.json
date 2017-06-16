@@ -1,5 +1,5 @@
 { "name": "transkey",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Object -> Object with keys translated by translator function or dictionary object.",
   "keywords": [
     "camel case",
